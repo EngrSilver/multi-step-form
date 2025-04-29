@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+.currentpage {
+  @apply bg-indigo-300;
+}
+
+.monyear {
+  transform: translateX(20px);
+}
