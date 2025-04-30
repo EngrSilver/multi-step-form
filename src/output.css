@@ -15,6 +15,7 @@
     --color-blue-400: oklch(70.7% 0.165 254.624);
     --color-blue-700: oklch(48.8% 0.243 264.376);
     --color-blue-800: oklch(42.4% 0.199 265.638);
+    --color-blue-900: oklch(37.9% 0.146 265.522);
     --color-blue-950: oklch(28.2% 0.091 267.935);
     --color-indigo-300: oklch(78.5% 0.115 274.713);
     --color-gray-50: oklch(98.5% 0.002 247.839);
@@ -205,6 +206,12 @@
   .bottom-\[-60px\] {
     bottom: -60px;
   }
+  .bottom-\[45px\] {
+    bottom: 45px;
+  }
+  .left-0 {
+    left: calc(var(--spacing) * 0);
+  }
   .m-10 {
     margin: calc(var(--spacing) * 10);
   }
@@ -383,6 +390,9 @@
   .text-\[13px\] {
     font-size: 13px;
   }
+  .text-\[15px\] {
+    font-size: 15px;
+  }
   .leading-relaxed {
     --tw-leading: var(--leading-relaxed);
     line-height: var(--leading-relaxed);
@@ -437,6 +447,13 @@
     outline-style: var(--tw-outline-style);
     outline-width: 0px;
   }
+  .hover\:cursor-pointer {
+    &:hover {
+      @media (hover: hover) {
+        cursor: pointer;
+      }
+    }
+  }
   .hover\:border-3 {
     &:hover {
       @media (hover: hover) {
@@ -452,10 +469,31 @@
       }
     }
   }
+  .hover\:bg-blue-900 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-blue-900);
+      }
+    }
+  }
   .hover\:bg-indigo-300 {
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-indigo-300);
+      }
+    }
+  }
+  .hover\:text-\[16px\] {
+    &:hover {
+      @media (hover: hover) {
+        font-size: 16px;
+      }
+    }
+  }
+  .hover\:text-white {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-white);
       }
     }
   }
@@ -465,6 +503,9 @@
 }
 .monyear {
   transform: translateX(20px);
+}
+.textofmonyear {
+  color: var(--color-blue-800);
 }
 @property --tw-rotate-x {
   syntax: "*";

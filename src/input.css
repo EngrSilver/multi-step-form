@@ -7,3 +7,7 @@
 .monyear {
   transform: translateX(20px);
 }
+
+.textofmonyear {
+  @apply text-blue-800;
+}

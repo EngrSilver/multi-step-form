@@ -10,7 +10,7 @@
     class="bg-blue-200 h-screen w-full flex gap-20 justify-center items-center"
   >
     <div
-      class="multi-step bg-white flex gap-10 justify-center items-center rounded-xl"
+      class="multi-step bg-white flex gap-10 justify-center items-center rounded-xl relative"
       style="padding: 10px"
     >
       <div
@@ -20,7 +20,7 @@
         <!--  -->
         <div class="m-10 flex gap-5" style="padding: 20px">
           <button
-            class="border-2 border-gray-100 hover:bg-indigo-300 rounded-4xl w-7 h-7 text-white currentpage"
+            class="border-2 border-gray-100 hover:bg-indigo-300 rounded-4xl w-7 h-7 text-white currentpage hover:cursor-pointer"
           >
             1
           </button>
@@ -36,7 +36,7 @@
         <!--  -->
         <div class="m-10 flex gap-5" style="padding: 20px">
           <button
-            class="border-2 border-gray-100 hover:bg-indigo-300 rounded-4xl w-7 h-7 text-white"
+            class="border-2 border-gray-100 hover:bg-indigo-300 rounded-4xl w-7 h-7 text-white hover:cursor-pointer"
           >
             2
           </button>
@@ -52,7 +52,7 @@
         <!--  -->
         <div class="m-10 flex gap-5" style="padding: 20px">
           <button
-            class="border-2 border-gray-100 hover:bg-indigo-300 rounded-4xl w-7 h-7 text-white"
+            class="border-2 border-gray-100 hover:bg-indigo-300 rounded-4xl w-7 h-7 text-white hover:cursor-pointer"
           >
             3
           </button>
@@ -68,7 +68,7 @@
         <!--  -->
         <div class="m-10 flex gap-5" style="padding: 20px">
           <button
-            class="border-2 border-gray-100 hover:bg-indigo-300 rounded-4xl w-7 h-7 text-white"
+            class="border-2 border-gray-100 hover:bg-indigo-300 rounded-4xl w-7 h-7 text-white hover:cursor-pointer"
           >
             4
           </button>
@@ -160,15 +160,17 @@
           />
         </div>
         <!--  -->
-        <button
-          class="absolute right-15 bottom-[-60px] bg-blue-800 text-gray-300 text-sm font-semibold rounded-sm"
-          style="padding: 7px"
-        >
-          Next Step
-        </button>
+
+        <!--=======================================================================================-->
       </div>
+      <button
+        class="absolute right-15 bottom-[45px] bg-blue-800 text-gray-300 text-sm font-semibold rounded-sm hover:bg-blue-900 hover:text-white hover:cursor-pointer"
+        style="padding: 7px"
+      >
+        Next Step
+      </button>
       <!--=======================================================================================-->
-      <div class="right-section2 mt-2.5">
+      <div class="right-section2 mt-2.5 relative hidden">
         <div class="header" style="margin: -60px 0 30px 0">
           <h1 class="text-blue-800 text-2xl font-bold">Select Your Plan</h1>
           <p class="text-[13px] text-gray-500">
@@ -178,7 +180,7 @@
         <div class="plans gap-2 flex" style="margin-right: 10px">
           <!--  -->
           <div
-            class="advanced border-2 border-gray-400 rounded-sm w-[120px] hover:border-blue-400 hover:border-3"
+            class="advanced border-2 border-gray-400 rounded-sm w-[120px] hover:border-blue-400 hover:border-3 hover:cursor-pointer"
             style="padding: 15px"
           >
             <img
@@ -192,7 +194,7 @@
           </div>
           <!--  -->
           <div
-            class="advanced border-2 border-gray-400 rounded-sm w-[120px] hover:border-blue-400 hover:border-3"
+            class="advanced border-2 border-gray-400 rounded-sm w-[120px] hover:border-blue-400 hover:border-3 hover:cursor-pointer"
             style="padding: 15px"
           >
             <img
@@ -207,7 +209,7 @@
 
           <!--  -->
           <div
-            class="advanced border-2 border-gray-400 rounded-sm w-[120px] hover:border-blue-400 hover:border-3"
+            class="advanced border-2 border-gray-400 rounded-sm w-[120px] hover:border-blue-400 hover:border-3 hover:cursor-pointer"
             style="padding: 15px"
           >
             <img
@@ -234,7 +236,21 @@
           </span>
           <span class="font-semibold text-gray-400">Yearly</span>
         </div>
+
+        <button
+          class="prev-button absolute left-0 bottom-[-60px] text-gray-500 text-[15px] font-semibold rounded-sm hover:text-[16px] hover:cursor-pointer"
+          style="padding: 7px"
+        >
+          Prev Step
+        </button>
       </div>
+      <!--=======================================================================================-->
+      <div class="right-section3 mt-2.5 relative">
+        <div class="header" style="margin: -60px 0 30px 0">
+          <h1 class="text-blue-800 text-2xl font-bold">Pick add-ons</h1>
+          <p class="text-[13px] text-gray-500">
+            Add-ons help enhance your gaming experience
+          </p>
     </div>
   </body>
 </html>
