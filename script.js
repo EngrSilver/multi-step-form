@@ -122,3 +122,79 @@ prevBtn.addEventListener("click", () => {
     nextBtn.textContent = "Next Step";
   }
 });
+// =======================Second Page==============================//
+
+const AllPlans = document.querySelectorAll(".plan");
+let price;
+let planName;
+const duration = document.querySelectorAll(".plan-duration");
+let val = "";
+
+const switcher = document.querySelector(".switcher");
+function toggleAndSetDuration() {
+  const monthly = document.querySelector(".monthly");
+  const bulb = document.querySelector(".bulb");
+  const yearly = document.querySelector(".yearly");
+
+  if (!bulb.classList.contains("monyear")) {
+    bulb.classList.add("monyear");
+    yearly.classList.add("textofmonyear");
+    monthly.classList.remove("textofmonyear");
+    duration.forEach((dura) => {
+      dura.textContent = "yr";
+    });
+    val = "Year";
+  } else if (bulb.classList.contains("monyear")) {
+    bulb.classList.remove("monyear");
+    yearly.classList.remove("textofmonyear");
+    monthly.classList.add("textofmonyear");
+    duration.forEach((dura) => {
+      dura.textContent = "mon";
+    });
+    val = "Monthly";
+  }
+  return val;
+}
+
+switcher.addEventListener("click", () => {
+  toggleAndSetDuration();
+});
+AllPlans.forEach((plan) => {
+  plan.addEventListener("click", function () {
+    AllPlans.forEach((p) => p.classList.remove("selectedPlan"));
+    this.classList.add("selectedPlan");
+    price = this.getAttribute("data-price");
+    planName = this.getAttribute("data-plan");
+
+    const chosedPlan = document.querySelector(".chosed-plan");
+    const chosedPlanPrice = document.querySelector(".chosed-plan-price");
+    chosedPlan.textContent = `${planName} ${val}`;
+    chosedPlanPrice.textContent = `Price: $${price}`;
+  });
+});
+
+// changes the plan from monthly to yearly and vice versa
+// const planChangeBtn = document.querySelector(".plan-change-btn");
+// const planChangeText = document.querySelector(".plan-change-text");
+
+// planChangeBtn.addEventListener("click", () => {
+//   AllPlans.forEach((plan) => {
+//     plan.classList.toggle("yearly-plan");
+//   });
+//   const chosedPlan = document.querySelector(".chosed-plan");
+//   const chosedPlanPrice = document.querySelector(".chosed-plan-price");
+
+//   if (planChangeText.textContent === "Monthly") {
+//     planChangeText.textContent = "Yearly";
+//     chosedPlanPrice.textContent = `Price: $${price * 10}`;
+//     chosedPlan.textContent = `${planName} (yearly)`;
+//   } else {
+//     planChangeText.textContent = "Monthly";
+//     chosedPlanPrice.textContent = `Price: $${price}`;
+//     chosedPlan.textContent = `${planName} (monthly)`;
+//   }
+// });
+
+// =======================Third Page==============================//
+
+// =======================Fourth Page==============================//

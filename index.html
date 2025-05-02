@@ -194,8 +194,10 @@
         <div class="plans gap-2 flex" style="margin-right: 10px">
           <!--  -->
           <div
-          class="advanced border-2 border-gray-400 rounded-sm w-[120px] hover:border-blue-400 hover:border-3 hover:cursor-pointer"
+          class=" plan arcade border-2 border-gray-400 rounded-sm w-[120px] hover:border-blue-400 hover:border-3 hover:cursor-pointer hover:bg-blue-100"
           style="padding: 15px"
+          data-price="9"
+          data-plan="arcade"
           >
           <img
           src="./images/icon-arcade.svg"
@@ -204,12 +206,14 @@
               style="margin-bottom: 20px"
               />
               <p class="text-blue-800 font-bold text-lg">Arcade</p>
-            <p class="text-[12px] font-semibold text-gray-400">$9/mon</p>
+            <p class="text-[12px] font-semibold text-gray-400">$9/<span class="plan-duration">mon</span></p>
           </div>
           <!--  -->
           <div
-            class="advanced border-2 border-gray-400 rounded-sm w-[120px] hover:border-blue-400 hover:border-3 hover:cursor-pointer"
+            class="plan advanced border-2 border-gray-400 rounded-sm w-[120px] hover:border-blue-400 hover:border-3 hover:cursor-pointer hover:bg-blue-100"
             style="padding: 15px"
+            data-price="12"
+            data-plan="Advanced"
             >
             <img
               src="./images/icon-advanced.svg"
@@ -217,14 +221,16 @@
               class="w-9.5 h-9.5"
               style="margin-bottom: 20px"
             />
-            <p class="text-blue-800 font-bold text-lg">Arcade</p>
-            <p class="text-[12px] font-semibold text-gray-400">$12/mon</p>
+            <p class="text-blue-800 font-bold text-lg">Advanced </p>
+            <p class="text-[12px] font-semibold text-gray-400">$12/<span class="plan-duration">mon</span></p>
           </div>
           
           <!--  -->
           <div
-            class="advanced border-2 border-gray-400 rounded-sm w-[120px] hover:border-blue-400 hover:border-3 hover:cursor-pointer"
+            class="plan pro advanced border-2 border-gray-400 rounded-sm w-[120px] hover:border-blue-400 hover:border-3 hover:cursor-pointer hover:bg-blue-100"
             style="padding: 15px"
+            data-price="15"
+            data-plan="pro"
           >
             <img
               src="./images/icon-pro.svg"
@@ -232,23 +238,23 @@
               class="w-9.5 h-9.5"
               style="margin-bottom: 20px"
             />
-            <p class="text-blue-800 font-bold text-lg">Arcade</p>
-            <p class="text-[12px] font-semibold text-gray-400">$15/mon</p>
+            <p class="text-blue-800 font-bold text-lg">Pro</p>
+            <p class="text-[12px] font-semibold text-gray-400">$15/<span class="plan-duration">mon</span></p>
           </div>
         </div>
         <div
-          class="mon-year-section w-[90%] h-5 bg-gray-50 rounded-lg flex gap-5 items-center justify-center mx-auto"
+          class="mon-year-section w-[90%] h-5 bg-gray-100 rounded-lg flex gap-5 items-center justify-center mx-auto"
           style="margin: 30px auto 20px auto; padding: 20px"
         >
-        <span class="font-semibold text-blue-800">Monthly</span>
-          <span class="w-11 h-4.5 bg-cyan-950 rounded-2xl flex items-center">
+        <span class=" monthly font-semibold text-gray-400 textofmonyear ">Monthly</span>
+          <span class="switcher w-11 h-4.5 bg-cyan-950 rounded-2xl flex items-center hover:cursor-pointer">
             <span
-            class="bg-white w-3.5 h-3.5 block rounded-lg pt-2.5 transform"
+            class="bulb bg-white w-3.5 h-3.5 block rounded-lg pt-2.5 transform"
               style="margin-left: 4px"
               >
             </span>
           </span>
-          <span class="font-semibold text-gray-400">Yearly</span>
+          <span class=" yearly font-semibold text-gray-400">Yearly</span>
         </div>
       </div>
       <!--=======================================================================================-->
@@ -354,12 +360,12 @@
         style="padding: 20px; margin-bottom: 20px;">
           <div class="your-subscription flex justify-between items-center">
             <div class="subscription">
-              <p class="text-blue-950 font-semibold text-lg">Arcade (Monthly)</p>
+              <p class="chosed-plan text-blue-950 font-semibold text-lg">Arcade (Monthly)</p>
               <a href="#" class="text-gray-400 font-semibold text-[12px] hover:text-blue-600 hover:cursor-pointer underline">
                 Change
               </a>
             </div>
-            <div class="price text-blue-950 font-bold text-sm">$9/mo</div>
+            <div class="chosed-plan-price text-blue-950 font-bold text-sm">$9/mo</div>
           </div>
           <div class="your-subscription-line w-[95%] h-[2px] bg-gray-300"
           style="margin: 20px auto;"></div>
