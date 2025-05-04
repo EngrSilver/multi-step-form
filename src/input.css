@@ -11,6 +11,7 @@
 .textofmonyear {
   @apply text-blue-800;
 }
-.selectedPlan {
+.selectedPlan,
+.selectedAdds {
   @apply bg-blue-200;
 }

@@ -13,7 +13,6 @@
     --color-cyan-950: oklch(30.2% 0.056 229.695);
     --color-blue-100: oklch(93.2% 0.032 255.585);
     --color-blue-200: oklch(88.2% 0.059 254.128);
-    --color-blue-300: oklch(80.9% 0.105 251.813);
     --color-blue-400: oklch(70.7% 0.165 254.624);
     --color-blue-600: oklch(54.6% 0.245 262.881);
     --color-blue-700: oklch(48.8% 0.243 264.376);
@@ -389,9 +388,6 @@
   .bg-cyan-950 {
     background-color: var(--color-cyan-950);
   }
-  .bg-gray-50 {
-    background-color: var(--color-gray-50);
-  }
   .bg-gray-100 {
     background-color: var(--color-gray-100);
   }
@@ -596,7 +592,7 @@
 .textofmonyear {
   color: var(--color-blue-800);
 }
-.selectedPlan {
+.selectedPlan, .selectedAdds {
   background-color: var(--color-blue-200);
 }
 @property --tw-rotate-x {
