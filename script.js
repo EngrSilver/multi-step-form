@@ -16,11 +16,16 @@ allBtn[0].classList.add("currentpage");
 
 // changes the active class on the button when clicked
 function addAtiveClass() {
-  allBtn.forEach((btn) => {
+  allBtn.forEach((btn, i) => {
     btn.addEventListener("click", function () {
       allBtn.forEach((b) => b.classList.remove("currentpage"));
       this.classList.add("currentpage");
       nextBtn.style.backgroundColor = "blue";
+      rightSection5.classList.add("hidden");
+      if (i === 3) {
+        nextBtn.style.backgroundColor = "green";
+        nextBtn.textContent = "Confirm";
+      }
     });
   });
 }
@@ -31,6 +36,11 @@ addAtiveClass();
 function showSection() {
   allBtn.forEach((btn, i) => {
     btn.addEventListener("click", function () {
+      nextBtn.classList.remove("hidden");
+      prevBtn.classList.remove("hidden");
+      if (i === 0) {
+        prevBtn.classList.add("hidden");
+      }
       allRightSection.forEach((section) => {
         section.classList.add("hidden");
       });
@@ -103,6 +113,8 @@ nextBtn.addEventListener("click", () => {
   if (currentSection === 3) {
     setTimeout(() => {
       allRightSection[currentSection].classList.add("hidden");
+      nextBtn.classList.add("hidden");
+      prevBtn.classList.add("hidden");
     }, 3000);
     setTimeout(() => {
       rightSection5.classList.remove("hidden");
@@ -112,7 +124,6 @@ nextBtn.addEventListener("click", () => {
     nextBtn.style.backgroundColor = "blue";
   }
   console.log(currentSection);
-
   // }
   // }
 });
