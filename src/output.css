@@ -195,26 +195,8 @@
   }
 }
 @layer utilities {
-  .absolute {
-    position: absolute;
-  }
   .relative {
     position: relative;
-  }
-  .right-0 {
-    right: calc(var(--spacing) * 0);
-  }
-  .right-15 {
-    right: calc(var(--spacing) * 15);
-  }
-  .bottom-\[45px\] {
-    bottom: 45px;
-  }
-  .bottom-\[50px\] {
-    bottom: 50px;
-  }
-  .left-85 {
-    left: calc(var(--spacing) * 85);
   }
   .z-40 {
     z-index: 40;
@@ -297,14 +279,17 @@
   .w-60 {
     width: calc(var(--spacing) * 60);
   }
-  .w-\[70\%\] {
-    width: 70%;
+  .w-\[80\%\] {
+    width: 80%;
   }
   .w-\[90\%\] {
     width: 90%;
   }
   .w-\[95\%\] {
     width: 95%;
+  }
+  .w-\[100\%\] {
+    width: 100%;
   }
   .w-\[120px\] {
     width: 120px;
@@ -317,6 +302,9 @@
   }
   .cursor-pointer {
     cursor: pointer;
+  }
+  .flex-col {
+    flex-direction: column;
   }
   .items-center {
     align-items: center;
@@ -525,14 +513,6 @@
       }
     }
   }
-  .hover\:border-3 {
-    &:hover {
-      @media (hover: hover) {
-        border-style: var(--tw-border-style);
-        border-width: 3px;
-      }
-    }
-  }
   .hover\:border-blue-400 {
     &:hover {
       @media (hover: hover) {
@@ -586,14 +566,105 @@
 .currentpage {
   background-color: var(--color-indigo-300);
 }
+.btn-text-space {
+  padding: 20px;
+}
+.multi-step {
+  padding: 10px;
+}
+.width {
+  width: 100%;
+}
+.header {
+  margin-top: -60px;
+}
 .monyear {
   transform: translateX(20px);
+}
+.btn-cont {
+  margin: auto;
+}
+.right-section5 {
+  width: 400px;
 }
 .textofmonyear {
   color: var(--color-blue-800);
 }
 .selectedPlan, .selectedAdds {
   background-color: var(--color-blue-200);
+}
+@media (max-width: 640px) {
+  body {
+    display: block;
+  }
+  .multi-step {
+    flex-direction: column;
+    width: 450px;
+    padding: 0;
+    width: 100%;
+  }
+  .left-section {
+    border-radius: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+    padding-left: 10px;
+    width: 100%;
+    height: 180px;
+    background-position: bottom;
+  }
+  .texts {
+    display: none;
+  }
+  .btn-text-space {
+    padding: 0;
+    margin: auto;
+  }
+  .right-section-content {
+    background-color: white;
+    border-radius: 30px;
+    position: absolute;
+    min-height: 430px;
+    top: 130px;
+    width: 90%;
+    padding-bottom: 10px;
+    justify-content: center;
+  }
+  .form {
+    text-align: center;
+  }
+  .plans {
+    flex-direction: column;
+    width: 100%;
+  }
+  .plan {
+    width: inherit;
+    display: flex;
+    gap: 30px;
+  }
+  .header {
+    margin-top: 0px;
+    margin-bottom: 30px;
+  }
+  .btn {
+    transform: scale(1.3);
+  }
+  .left-section-insider {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 7px;
+  }
+  .right-section2 {
+    padding: 20px;
+  }
+  .right-section5 {
+    width: 80%;
+    margin: auto;
+    height: 360px;
+  }
 }
 @property --tw-rotate-x {
   syntax: "*";

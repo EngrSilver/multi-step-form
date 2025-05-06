@@ -54,78 +54,88 @@ showSection();
 
 let currentSection = 0;
 const rightSection5 = document.querySelector(".right-section5");
+const rightSection1 = document.querySelector(".right-section1");
+const leftSection = document.querySelector(".left-section");
 
 nextBtn.addEventListener("click", () => {
-  // const name = UsernameInput.value;
-  // const nameRegex = /^[a-zA-Z]{2,}(?: [a-zA-Z]{1,})*$/;
+  const name = UsernameInput.value;
+  const nameRegex = /^[a-zA-Z]{2,}(?: [a-zA-Z]{1,})*$/;
 
-  // if (!nameRegex.test(name)) {
-  //   nameLabel.classList.remove("hidden");
-  //   setTimeout(() => {
-  //     nameLabel.classList.add("hidden");
-  //   }, 3000);
-  // }
-
-  // const email = UserEmail.value;
-  // const emailRegex = /^[^\@]+@[^\s@]+\.[^\s@]+$/;
-
-  // if (!emailRegex.test(email)) {
-  //   emailLabel.classList.remove("hidden");
-  //   setTimeout(() => {
-  //     emailLabel.classList.add("hidden");
-  //   }, 3000);
-  // }
-
-  // const phone = UserPhone.value;
-  // const phoneRegex =
-  //   /^(?:\+234|234|0)(70[1-9]|80[2-9]|81[0-9]|90[1-9]|91[0-9]|701|702|703|704|705|706|707|708|709)\d{7}$/;
-
-  // if (!phoneRegex.test(phone)) {
-  //   phoneLabel.classList.remove("hidden");
-  //   setTimeout(() => {
-  //     phoneLabel.classList.add("hidden");
-  //   }, 3000);
-  // }
-
-  // if (nameRegex.test(name) & emailRegex.test(email) & phoneRegex.test(phone)) {
-  allRightSection.forEach((section, i) => {
-    section.classList.add("hidden");
-  });
-  allBtn.forEach((btn) => {
-    btn.classList.remove("currentpage");
-  });
-
-  currentSection = (currentSection + 1) % allRightSection.length;
-
-  allBtn[currentSection].classList.add("currentpage");
-  allRightSection[currentSection].classList.remove("hidden");
-  if (currentSection > 0) {
-    prevBtn.classList.remove("hidden");
-  }
-  if (currentSection === 0) {
-    prevBtn.classList.add("hidden");
-    rightSection5.classList.add("hidden");
-  }
-  if (currentSection > 2) {
-    nextBtn.style.backgroundColor = "green";
-    nextBtn.textContent = "Confirm";
-  }
-  if (currentSection === 3) {
+  if (!nameRegex.test(name)) {
+    nameLabel.classList.remove("hidden");
     setTimeout(() => {
-      allRightSection[currentSection].classList.add("hidden");
-      nextBtn.classList.add("hidden");
+      nameLabel.classList.add("hidden");
+    }, 3088800);
+  }
+
+  const email = UserEmail.value;
+  const emailRegex = /^[^\@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!emailRegex.test(email)) {
+    emailLabel.classList.remove("hidden");
+    setTimeout(() => {
+      emailLabel.classList.add("hidden");
+    }, 30576787600);
+  }
+
+  const phone = UserPhone.value;
+  const phoneRegex =
+    /^(?:\+234|234|0)(70[1-9]|80[2-9]|81[0-9]|90[1-9]|91[0-9]|701|702|703|704|705|706|707|708|709)\d{7}$/;
+
+  if (!phoneRegex.test(phone)) {
+    phoneLabel.classList.remove("hidden");
+    setTimeout(() => {
+      phoneLabel.classList.add("hidden");
+    }, 365646000);
+  }
+
+  if (nameRegex.test(name) & emailRegex.test(email) & phoneRegex.test(phone)) {
+    allRightSection.forEach((section, i) => {
+      section.classList.add("hidden");
+    });
+    allBtn.forEach((btn) => {
+      btn.classList.remove("currentpage");
+    });
+
+    currentSection = (currentSection + 1) % allRightSection.length;
+
+    allBtn[currentSection].classList.add("currentpage");
+    allRightSection[currentSection].classList.remove("hidden");
+    if (currentSection > 0) {
+      prevBtn.classList.remove("hidden");
+    }
+    if (currentSection === 0) {
       prevBtn.classList.add("hidden");
-    }, 3000);
-    setTimeout(() => {
-      rightSection5.classList.remove("hidden");
-    }, 3000);
-  } else {
-    nextBtn.textContent = "Next Step";
-    nextBtn.style.backgroundColor = "blue";
+      rightSection5.classList.add("hidden");
+    }
+    if (currentSection > 2) {
+      nextBtn.style.backgroundColor = "green";
+      nextBtn.textContent = "Confirm";
+    }
+    if (currentSection === 3) {
+      nextBtn.addEventListener("click", () => {
+        leftSection.classList.add("hidden");
+        nextBtn.classList.add("hidden");
+        prevBtn.classList.add("hidden");
+        allRightSection[currentSection].classList.add("hidden");
+        setTimeout(() => {
+          rightSection5.classList.remove("hidden");
+          rightSection5.style.display = "flex";
+        }, 500);
+        setTimeout(() => {
+          rightSection5.classList.add("hidden");
+          rightSection1.classList.remove("hidden");
+          location.reload();
+        }, 709709709700);
+      });
+      nextBtn.classList.remove("hidden");
+      prevBtn.classList.remove("hidden");
+    } else {
+      nextBtn.textContent = "Next Step";
+      nextBtn.style.backgroundColor = "blue";
+    }
+    console.log(currentSection);
   }
-  console.log(currentSection);
-  // }
-  // }
 });
 
 // goes back to the previous section when the previous button is clicked
